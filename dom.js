@@ -1,28 +1,49 @@
-//console.dir(document)
-//console.log(document.domain)
+//console.dir(document.domain)
+//document.title="moj prvi sajt"
+//console.dir(document.all)
+//console.log (document.all(6))
+let lis=document.getElementById("items")
+//console.log(listitems)
+let items=document.getElementsByClassName("list-items")
+items[2].textContent = "paraglajder" 
+//for(i = 0; i=listitems.length;i++)
 
-//console.log(document.title)
-//document.title="Moj prvi sajt"
+//console.dir(document.getElementById("header title"))
+let headerTitle=document.getElementById("header title")
 
-//console.dir(document.head)
-//console.log(document.all)
-//console.log(document.all[8])
+headerTitle.innerHTML="<h3> ASD </h3>"
+//console.log(headerTitle.textContent)
+//console.log(headerTitle.innerText)
 
-//document.all[8].textContent="Drugi naslov"
+//textContent vs innerText
 
-console.log(document.forms);
-console.log(document.forms[0]);
+//console.log(document.getElementsByTagName("li"))
+let li=document.getElementsByTagName("li")
 
-console.log(document.getElementsByClassName("list-item"));
+li[1].textContent="asd"
+li[1].style.fontSize="20px";
+li[1].style.fontWeight="bold";
 
-let items=document.getElementsByClassName("list-item");
+console.log(document.getElementsByClassName("title"))
 
-items[3].textContent="promenila sam listu";
-items[2].style.backgroundColor="purple";
-for(let i =0 ;i<items.length;i++){
-    if(i%2==0) items[i].style.backgroundColor="grey";
-    else items[i].style.backgroundColor="lightgrey";
-}
+
+let title=document.getElementsByClassName("title")
+title[1].textContent="Promenila title"
+let container=document.getElementById("container")
+container.style.backgroundColor="purple"
+
+
+//query selector
+
+let drugiLink=document.querySelector(".link-item")
+console.log(drugiLink)
+
+drugiLink.style.backgroundColor="red"
+
+//query selecor all
+let lista=document.querySelecotAll(".list-item");
+console.log(lista)
+lista[2].textContent="ne znam sta"
 
 
 
