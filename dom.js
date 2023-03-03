@@ -47,7 +47,7 @@ console.log(lista)
 lista[2].textContent="ne znam sta"
 
 */
-
+/*
 //parentNode
 let listItem = document.getElementById("items")
 console.log(listItem.parentNode.parentNode)
@@ -96,6 +96,67 @@ lista[1].previousElementSibling.style.backgroundColor = "red"
 
 lista[1].parentElement.parentElement.style.backgroundColor = "yellow"
 
+*/
+/*
+let newDiv = document.createElement("div");
+let textNode = document.createTextNode("Napravio sam novi element");
+newDiv.appendChild(textNode);
+
+let container = document.getElementById("container");
+let h2 = document.querySelector("#container h2");
+container.insertBefore(newDiv, h2);
+
+
+
+//novi element
+let paragraf = document.createElement("p");
+//text
+let text = document.createTextNode("lorem ipsum loremloremlorem");
+//povezati element i text
+paragraf.appendChild(text);
+
+//izabrati element u koji ce da se stavi novi element
+let divContainer = document.getElementById("svejedno");
+//izabrati element pored kojeg ce da stoji novi element
+let divP = document.querySelector("#svejedno p");
+//staviti element u divContainer pored divP
+svejedno.insertBefore(paragraf, divP);
+
+
+
+
+let noviItem = document.createElement("li");
+let textItem = document.createTextNode("novi item");
+noviItem.appendChild(textItem);
+
+let divItem = document.getElementById("items");
+//items.insertBefore(noviItem,divItem.firstChild)
+items.insertBefore(noviItem, divItem.lastChild.nextSibling)
+*/
+
+//EVENT
+
+let button = document.getElementById("button")
+let textBox = document.getElementById("textBox")
+
+
+let addNewItemToList = function () {
+    let text = textBox.value
+    let noviItem = document.createElement("li");
+    let textItem = document.createTextNode(text);
+    noviItem.appendChild(textItem);
+
+    let divItem = document.getElementById("items");
+    console.log(items.childNodes)
+    //items.insertBefore(noviItem,divItem.firstChild)
+    items.insertBefore(noviItem, divItem.lastChild.nextSibling)
+    textBox.value = ""
+
+}
+
+
+
+button.addEventListener('click', addNewItemToList)
 
 
 
