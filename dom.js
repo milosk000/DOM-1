@@ -134,6 +134,7 @@ let divItem = document.getElementById("items");
 items.insertBefore(noviItem, divItem.lastChild.nextSibling)
 */
 
+/*
 //EVENT
 
 let button = document.getElementById("button")
@@ -153,10 +154,31 @@ let addNewItemToList = function () {
     textBox.value = ""
 
 }
+*/
+/*
+let dugme1 = document.getElementById("dugme")
+let radiNesto = function(event){
+    console.log(event)
+    console.log(event.target)
+    console.log(event.target.id)
+    console.log(event.offsetX)
+}
+dugme1.addEventListener('click', radiNesto)
+*/
+/*
+let zuti1 = document.getElementById("zuti")
+let changeColor = function(event){
+    let bojaRGB = "rgb(" + event.offsetX + "," + event.offsetY + ", 40)"
+    event.target.style.backgroundColor = bojaRGB
+}
+zuti1.addEventListener("mousemove", changeColor)
+*/
 
-
-
-button.addEventListener('click', addNewItemToList)
-
-
-
+let celaStrana = document.querySelector("*")
+let bojaStranice = function(event){
+    let red = Math.floor (event.pageX/(Window.InnerWidth/255+1))
+    let green = Math.floor (event.pageX/(Window.InnerWidth/255+1))
+    let bojaRGB = "rgb(" + event.offsetX + "," + event.offsetY + ", 60)"
+    celaStrana.style.backgroundColor = bojaRGB
+}
+celaStrana.addEventListener("mousemove", bojaStranice)
